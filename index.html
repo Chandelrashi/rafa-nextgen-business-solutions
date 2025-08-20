@@ -19,6 +19,7 @@
             font-family: 'Arial', sans-serif;
             background-color: var(--light-bg);
             color: var(--text-dark);
+            /* Enable smooth scrolling for anchor navigation */
             scroll-behavior: smooth;
         }
         header {
@@ -54,7 +55,9 @@
         }
         .hero {
             position: relative;
-            background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+            background-image: url('hero.png');
+            background-size: cover;
+            background-position: center;
             height: 400px;
             display: flex;
             align-items: center;
@@ -115,6 +118,7 @@
         .card ul li {
             margin-bottom: 8px;
         }
+        /* Expandable details for service cards */
         .details {
             display: none;
             font-size: 14px;
@@ -139,10 +143,30 @@
         .learn-more:hover {
             background: var(--accent-color);
         }
+
+        /* Price summary styling for interactive price selection */
+        .price-summary {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background: var(--light-bg);
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+            font-size: 14px;
+            color: var(--text-dark);
+        }
+        /* Show the price summary when the card has the show-price class */
+        .card.show-price .price-summary {
+            display: block;
+        }
         .support {
             background: var(--primary-color);
             color: white;
             padding: 40px 20px;
+        }
+        .support h3 {
+            margin-top: 0;
+            color: var(--accent-color);
         }
         .support .plan-list {
             display: grid;
@@ -166,6 +190,9 @@
         .contact {
             background: var(--light-bg);
             padding: 40px 20px;
+        }
+        .contact h3 {
+            margin-top: 0;
         }
         .contact form {
             display: grid;
@@ -221,12 +248,14 @@
             </ul>
         </nav>
     </header>
+
     <section class="hero">
         <div class="hero-content">
             <h2>Empowering Your Business for the Next Generation</h2>
             <p>Smart websites, powerful dashboards, and tailored platforms to drive growth and efficiency for small and medium enterprises.</p>
         </div>
     </section>
+
     <section id="services" class="container">
         <h2>Our Services</h2>
         <div class="services">
@@ -234,36 +263,45 @@
                 <h3>Website Development</h3>
                 <p>Professional web solutions for every stage of your business.</p>
                 <ul>
-                    <li><strong>Starter Package:</strong> 3–5 page responsive site, basic SEO</li>
-                    <li><strong>Business Package:</strong> Multi-page site, blog, contact forms</li>
-                    <li><strong>Premium Package:</strong> E-commerce integration with training</li>
+                    <!-- Added price ranges to clearly communicate package costs -->
+                    <li><strong>Starter Package:</strong> 3–5‑page responsive site, basic SEO – £500–£800</li>
+                    <li><strong>Business Package:</strong> 6–10 pages, blog, contact forms – £1,000–£1,800</li>
+                    <li><strong>Premium Package:</strong> E‑commerce integration with training – £1,800–£3,500+</li>
                 </ul>
+                <!-- Price summary will display the selected package details -->
+                <div class="price-summary"></div>
                 <button class="learn-more">Learn More</button>
                 <div class="details">
                     Our website development solutions include fully responsive design, SEO-friendly architecture, user-friendly content management systems, custom functionality tailored to your needs, and post-launch training so your team can manage and grow your digital presence with confidence.
                 </div>
             </div>
             <div class="card">
-                <h3>HR & Platform Integration</h3>
+                <h3>HR &amp; Platform Integration</h3>
                 <p>Simplify HR processes and enhance productivity.</p>
                 <ul>
-                    <li><strong>Starter Toolkit:</strong> Staff database, onboarding, leave tracking</li>
-                    <li><strong>Business Dashboard:</strong> Automated leave approval, payroll summary</li>
-                    <li><strong>Premium Platform:</strong> Custom HR system with Slack/MSTeams integration</li>
+                    <!-- Added price ranges to the HR packages -->
+                    <li><strong>Starter Toolkit:</strong> Staff database, onboarding, leave tracking – £800–£1,200</li>
+                    <li><strong>Business Dashboard:</strong> Automated leave approval, payroll summary – £1,500–£2,500</li>
+                    <li><strong>Premium Platform:</strong> Custom HR system with Slack/MSTeams integration – £3,000–£6,000+</li>
                 </ul>
+                <!-- Price summary will display the selected package details -->
+                <div class="price-summary"></div>
                 <button class="learn-more">Learn More</button>
                 <div class="details">
                     Our HR and platform integration services help you streamline operations with custom HR dashboards, automated onboarding and leave management, payroll summaries, and seamless integration with communication tools like Slack and Microsoft Teams. Enhance efficiency and empower your people with accessible, centralized HR data.
                 </div>
             </div>
             <div class="card">
-                <h3>Data & Power BI Dashboards</h3>
+                <h3>Data &amp; Power BI Dashboards</h3>
                 <p>Transform data into actionable insights.</p>
                 <ul>
-                    <li><strong>Starter Dashboard:</strong> Single KPI dashboard with training</li>
-                    <li><strong>Business Intelligence:</strong> Multi-department dashboards, automated reports</li>
-                    <li><strong>Premium Suite:</strong> Custom analytics platform with advanced forecasting</li>
+                    <!-- Added price ranges to the analytics packages -->
+                    <li><strong>Starter Dashboard:</strong> Single KPI dashboard with training – £600–£1,200</li>
+                    <li><strong>Business Intelligence:</strong> Multi‑department dashboards, automated reports – £2,000–£4,000</li>
+                    <li><strong>Premium Analytics Suite:</strong> Custom analytics platform with advanced forecasting – from £5,000</li>
                 </ul>
+                <!-- Price summary will display the selected package details -->
+                <div class="price-summary"></div>
                 <button class="learn-more">Learn More</button>
                 <div class="details">
                     Our analytics and Power BI dashboards convert raw data into interactive, easy-to-understand visuals. From single KPI views to comprehensive multi-department dashboards and advanced forecasting models, you'll gain insights that drive strategic decisions and reveal growth opportunities.
@@ -271,6 +309,7 @@
             </div>
         </div>
     </section>
+
     <section id="support" class="support">
         <div class="container">
             <h2>Support Plans</h2>
@@ -294,6 +333,7 @@
             </div>
         </div>
     </section>
+
     <section id="contact" class="contact">
         <div class="container">
             <h2>Contact Us</h2>
@@ -308,25 +348,52 @@
             <p>Phone: +44 1234 567890</p>
         </div>
     </section>
+
     <footer>
         &copy; 2025 RAFA NextGen Business Solutions LTD. All rights reserved.
     </footer>
+
+    <!-- Interactive script for expanding service details -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const cards = document.querySelectorAll('.card');
             cards.forEach(card => {
                 const button = card.querySelector('.learn-more');
-                if (!button) return;
-                button.addEventListener('click', function(event) {
-                    event.preventDefault();
-                    card.classList.toggle('expanded');
-                    if (card.classList.contains('expanded')) {
-                        button.textContent = 'Show Less';
-                    } else {
-                        button.textContent = 'Learn More';
-                    }
+                if (button) {
+                    button.addEventListener('click', function(event) {
+                        event.preventDefault();
+                        card.classList.toggle('expanded');
+                        if (card.classList.contains('expanded')) {
+                            button.textContent = 'Show Less';
+                        } else {
+                            button.textContent = 'Learn More';
+                        }
+                    });
+                }
+                // Handle interactive price selection
+                const listItems = card.querySelectorAll('ul li');
+                const priceSummary = card.querySelector('.price-summary');
+                listItems.forEach(item => {
+                    item.style.cursor = 'pointer';
+                    item.addEventListener('click', function() {
+                        // Update the price summary text with the selected package
+                        if (priceSummary) {
+                            priceSummary.textContent = 'Selected: ' + item.textContent.trim();
+                            // Show the price summary by toggling the class
+                            card.classList.add('show-price');
+                        }
+                    });
                 });
             });
+            // Handle contact form submission with a friendly message
+            const contactForm = document.querySelector('.contact form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    alert('Thank you for contacting us! We will get back to you soon.');
+                    contactForm.reset();
+                });
+            }
         });
     </script>
 </body>
