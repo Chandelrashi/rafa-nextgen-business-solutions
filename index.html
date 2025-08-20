@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAFA NextGen Business Solutions LTD</title>
+    <style>
+        :root {
+            --primary-color: #1F2937;
+            --secondary-color: #3B82F6;
+            --accent-color: #10B981;
+            --light-bg: #F9FAFB;
+            --dark-bg: #111827;
+            --text-dark: #1F2937;
+            --text-light: #F3F4F6;
+        }
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            scroll-behavior: smooth;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: var(--accent-color);
+        }
+        .hero {
+            position: relative;
+            background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .hero h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        .card h3 {
+            margin-top: 0;
+            color: var(--secondary-color);
+        }
+        .card ul {
+            padding-left: 20px;
+        }
+        .card ul li {
+            margin-bottom: 8px;
+        }
+        .details {
+            display: none;
+            font-size: 14px;
+            margin-top: 10px;
+            color: var(--text-dark);
+            line-height: 1.4;
+        }
+        .card.expanded .details {
+            display: block;
+        }
+        .learn-more {
+            margin-top: 10px;
+            padding: 8px 12px;
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        .learn-more:hover {
+            background: var(--accent-color);
+        }
+        .support {
+            background: var(--primary-color);
+            color: white;
+            padding: 40px 20px;
+        }
+        .support .plan-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .plan {
+            background: var(--dark-bg);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .plan h4 {
+            margin: 0 0 10px;
+            color: var(--secondary-color);
+        }
+        .plan p {
+            font-size: 14px;
+            margin: 10px 0;
+        }
+        .contact {
+            background: var(--light-bg);
+            padding: 40px 20px;
+        }
+        .contact form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .contact input,
+        .contact textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .contact button {
+            grid-column: span 2;
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .contact button:hover {
+            background: var(--accent-color);
+        }
+        footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        @media (max-width: 600px) {
+            .hero h2 {
+                font-size: 28px;
+            }
+            .hero p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>RAFA NextGen Business Solutions LTD</h1>
+        <nav>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#support">Support</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Empowering Your Business for the Next Generation</h2>
+            <p>Smart websites, powerful dashboards, and tailored platforms to drive growth and efficiency for small and medium enterprises.</p>
+        </div>
+    </section>
+    <section id="services" class="container">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="card">
+                <h3>Website Development</h3>
+                <p>Professional web solutions for every stage of your business.</p>
+                <ul>
+                    <li><strong>Starter Package:</strong> 3–5 page responsive site, basic SEO</li>
+                    <li><strong>Business Package:</strong> Multi-page site, blog, contact forms</li>
+                    <li><strong>Premium Package:</strong> E-commerce integration with training</li>
+                </ul>
+                <button class="learn-more">Learn More</button>
+                <div class="details">
+                    Our website development solutions include fully responsive design, SEO-friendly architecture, user-friendly content management systems, custom functionality tailored to your needs, and post-launch training so your team can manage and grow your digital presence with confidence.
+                </div>
+            </div>
+            <div class="card">
+                <h3>HR & Platform Integration</h3>
+                <p>Simplify HR processes and enhance productivity.</p>
+                <ul>
+                    <li><strong>Starter Toolkit:</strong> Staff database, onboarding, leave tracking</li>
+                    <li><strong>Business Dashboard:</strong> Automated leave approval, payroll summary</li>
+                    <li><strong>Premium Platform:</strong> Custom HR system with Slack/MSTeams integration</li>
+                </ul>
+                <button class="learn-more">Learn More</button>
+                <div class="details">
+                    Our HR and platform integration services help you streamline operations with custom HR dashboards, automated onboarding and leave management, payroll summaries, and seamless integration with communication tools like Slack and Microsoft Teams. Enhance efficiency and empower your people with accessible, centralized HR data.
+                </div>
+            </div>
+            <div class="card">
+                <h3>Data & Power BI Dashboards</h3>
+                <p>Transform data into actionable insights.</p>
+                <ul>
+                    <li><strong>Starter Dashboard:</strong> Single KPI dashboard with training</li>
+                    <li><strong>Business Intelligence:</strong> Multi-department dashboards, automated reports</li>
+                    <li><strong>Premium Suite:</strong> Custom analytics platform with advanced forecasting</li>
+                </ul>
+                <button class="learn-more">Learn More</button>
+                <div class="details">
+                    Our analytics and Power BI dashboards convert raw data into interactive, easy-to-understand visuals. From single KPI views to comprehensive multi-department dashboards and advanced forecasting models, you'll gain insights that drive strategic decisions and reveal growth opportunities.
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="support" class="support">
+        <div class="container">
+            <h2>Support Plans</h2>
+            <p>Stay current with our maintenance and data reporting services.</p>
+            <div class="plan-list">
+                <div class="plan">
+                    <h4>Basic Support</h4>
+                    <p>Website security updates and monthly dashboard refresh. Ideal for small businesses.</p>
+                    <p><strong>£75–£150 / month</strong></p>
+                </div>
+                <div class="plan">
+                    <h4>Business Support</h4>
+                    <p>Includes website backups, up to five content edits per month, and priority dashboard maintenance.</p>
+                    <p><strong>£200–£400 / month</strong></p>
+                </div>
+                <div class="plan">
+                    <h4>Premium Support</h4>
+                    <p>Unlimited site updates, comprehensive data analytics management, and quarterly strategic review.</p>
+                    <p><strong>£500+ / month</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Ready to transform your business? Get in touch for a free consultation.</p>
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <p>Email: info@rafanextgen.co.uk</p>
+            <p>Phone: +44 1234 567890</p>
+        </div>
+    </section>
+    <footer>
+        &copy; 2025 RAFA NextGen Business Solutions LTD. All rights reserved.
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                const button = card.querySelector('.learn-more');
+                if (!button) return;
+                button.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    card.classList.toggle('expanded');
+                    if (card.classList.contains('expanded')) {
+                        button.textContent = 'Show Less';
+                    } else {
+                        button.textContent = 'Learn More';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
