@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RAFA NextGen Business Solutions LTD</title>
+    <!-- Preload our hero background video for faster playback -->
+    <link rel="preload" as="video" href="https://download.samplelib.com/mp4/sample-5s.mp4" type="video/mp4">
+    <!-- Modern Google font for a more polished look -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <meta name="description" content="Reliable IT solutions, web development, HR integration and data analytics delivered by top talent. We embed with your team to ensure success.">
     <style>
         :root {
@@ -16,7 +20,8 @@
 
         body {
             margin: 0;
-            font-family: 'Arial', sans-serif;
+            /* Use Montserrat font for a modern appearance */
+            font-family: 'Montserrat', Arial, sans-serif;
             background-color: var(--light-bg);
             color: var(--text-dark);
             line-height: 1.5;
@@ -58,9 +63,9 @@
             text-decoration: underline;
         }
 
-        /* Hero section */
+        /* Hero section with video background */
         .hero {
-            background: url('hero.png') center/cover no-repeat;
+            position: relative;
             min-height: 450px;
             display: flex;
             flex-direction: column;
@@ -68,13 +73,25 @@
             justify-content: center;
             text-align: center;
             color: white;
-            position: relative;
+            overflow: hidden;
         }
+        /* Video element fills the hero container */
+        .hero .bg-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+        /* Add a gradient overlay on top of the video for contrast */
         .hero::before {
             content: '';
             position: absolute;
             inset: 0;
             background: linear-gradient(to bottom right, rgba(7,29,65,0.7), rgba(0,94,184,0.7));
+            z-index: -1;
         }
         .hero h1 {
             font-size: 36px;
@@ -260,6 +277,11 @@
     </header>
 
     <section class="hero">
+        <!-- Video background for the hero section -->
+        <video class="bg-video" autoplay muted loop playsinline>
+            <source src="https://download.samplelib.com/mp4/sample-5s.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <h1>Empowering Your Business for the Next Generation</h1>
         <p>Smart websites, powerful dashboards and tailored platforms to drive growth and efficiency for small and medium enterprises.</p>
     </section>
