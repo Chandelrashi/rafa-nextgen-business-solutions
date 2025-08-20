@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RAFA NextGen Business Solutions LTD</title>
-    <meta name="description" content="Smart websites, powerful dashboards and HR platforms to drive growth and efficiency for small and medium enterprises.">
+    <title>Data &amp; Power BI Analytics | RAFA NextGen</title>
+    <meta name="description" content="Transform raw data into actionable insights with our Power BI dashboards and analytics packages designed for small and medium businesses.">
     <style>
         :root {
             --primary-color: #071d41;
@@ -13,7 +13,6 @@
             --text-dark: #1f2937;
             --card-bg: #ffffff;
         }
-
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
@@ -21,8 +20,6 @@
             color: var(--text-dark);
             line-height: 1.5;
         }
-
-        /* Navigation */
         header {
             background-color: var(--primary-color);
             color: white;
@@ -57,17 +54,15 @@
         .nav-links a:hover {
             text-decoration: underline;
         }
-
-        /* Hero section */
         .hero {
             background: url('hero.png') center/cover no-repeat;
-            min-height: 450px;
+            min-height: 300px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            text-align: center;
             color: white;
+            text-align: center;
             position: relative;
         }
         .hero::before {
@@ -77,63 +72,62 @@
             background: linear-gradient(to bottom right, rgba(7,29,65,0.7), rgba(0,94,184,0.7));
         }
         .hero h1 {
-            font-size: 36px;
+            font-size: 32px;
             margin: 0;
             position: relative;
         }
         .hero p {
             font-size: 18px;
-            margin-top: 10px;
             max-width: 600px;
+            margin-top: 10px;
             position: relative;
         }
-
-        /* Services Overview */
-        .services-overview {
-            padding: 60px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
+        .content {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
-        .services-overview h2 {
-            text-align: center;
-            margin-bottom: 40px;
+        .content h2 {
+            color: var(--secondary-color);
+            margin-top: 40px;
         }
-        .card-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-        .service-card {
+        .package {
             background: var(--card-bg);
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
             padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            margin-bottom: 20px;
         }
-        .service-card h3 {
+        .package h3 {
             margin-top: 0;
+            color: var(--primary-color);
+        }
+        .package ul {
+            padding-left: 20px;
+        }
+        .package li {
+            margin-bottom: 6px;
+        }
+        .package .price-range {
+            font-weight: bold;
+            margin-top: 10px;
             color: var(--secondary-color);
         }
-        .service-card p {
-            font-size: 14px;
+        .cta {
+            text-align: center;
+            margin-top: 30px;
         }
-        .service-card a {
-            margin-top: 15px;
-            align-self: flex-start;
+        .cta a {
             background: var(--secondary-color);
             color: white;
-            padding: 10px 16px;
+            padding: 12px 24px;
             border-radius: 4px;
             text-decoration: none;
-            font-size: 14px;
+            font-size: 16px;
         }
-        .service-card a:hover {
+        .cta a:hover {
             background: #004e90;
         }
-
-        /* Footer */
         footer {
             background: var(--primary-color);
             color: white;
@@ -169,33 +163,48 @@
             </ul>
         </nav>
     </header>
-
     <section class="hero">
-        <h1>Empowering Your Business for the Next Generation</h1>
-        <p>Smart websites, powerful dashboards and tailored platforms to drive growth and efficiency for small and medium enterprises.</p>
+        <h1>Data &amp; Power BI Analytics</h1>
+        <p>Turn raw numbers into powerful stories with interactive dashboards and insights.</p>
     </section>
-
-    <section class="services-overview">
-        <h2>Our Core Services</h2>
-        <div class="card-container">
-            <div class="service-card">
-                <h3>Website Development</h3>
-                <p>From simple brochure sites to robust e‑commerce platforms, we craft responsive web experiences that look great on every device.</p>
-                <a href="website-development.html">Learn more</a>
-            </div>
-            <div class="service-card">
-                <h3>HR &amp; Platform Integration</h3>
-                <p>Automate onboarding, timesheets and payroll with tailored HR dashboards and integrations into your existing systems.</p>
-                <a href="hr-platform-integration.html">Learn more</a>
-            </div>
-            <div class="service-card">
-                <h3>Data &amp; Power BI Dashboards</h3>
-                <p>Unlock the story behind your numbers with dashboards and analytics that turn raw data into actionable insights.</p>
-                <a href="data-powerbi.html">Learn more</a>
-            </div>
+    <div class="content">
+        <h2>Our Packages</h2>
+        <div class="package">
+            <h3>Starter Dashboard</h3>
+            <ul>
+                <li>One Power BI dashboard for a key area (sales, finance or HR)</li>
+                <li>Data connection from Excel or Google Sheets</li>
+                <li>Visual KPIs and summary reports</li>
+                <li>1 hour of user training</li>
+            </ul>
+            <p class="price-range">£600–£1,200</p>
         </div>
-    </section>
-
+        <div class="package">
+            <h3>Business Intelligence</h3>
+            <ul>
+                <li>Multiple dashboards covering sales, finance and HR</li>
+                <li>Automated data refresh and scheduled reports</li>
+                <li>Exportable PDF reports and email scheduling</li>
+                <li>Training for up to 3 users</li>
+            </ul>
+            <p class="price-range">£2,000–£4,000</p>
+        </div>
+        <div class="package">
+            <h3>Premium Analytics Suite</h3>
+            <ul>
+                <li>Custom analytics environment with CRM/ERP integration</li>
+                <li>Advanced forecasting and drill‑down analysis</li>
+                <li>Real‑time dashboards with mobile access</li>
+                <li>3 months support and data quality monitoring</li>
+            </ul>
+            <p class="price-range">£5,000+</p>
+        </div>
+        <h2>Why choose us?</h2>
+        <p>Data alone doesn’t drive change—it’s the insights behind it. Our analytics packages translate your raw numbers into easy‑to‑understand dashboards so you can make informed decisions. We address common pain points by organising information clearly and focusing on what matters most【543644734196531†L99-L113】【543644734196531†L144-L151】. With support and training included, you’ll be empowered to harness the power of data without needing to become an expert analyst.</p>
+        <div class="cta">
+            <a href="#contact">Arrange a discovery call</a>
+        </div>
+    </div>
     <footer id="contact">
         <div class="footer-content">
             <p><strong>Contact Us</strong></p>
