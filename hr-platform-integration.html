@@ -1,219 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HR & Platform Integration | RAFA NextGen</title>
-    <!-- Modern Google font to match our updated design -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <meta name="description" content="Simplify HR processes and enhance productivity with integrated dashboards, automated workflows and custom HR platforms.">
-    <style>
-        :root {
-            --primary-color: #071d41;
-            --secondary-color: #005eb8;
-            --light-bg: #f5f7fa;
-            --text-dark: #1f2937;
-            --card-bg: #ffffff;
-        }
-        body {
-            margin: 0;
-            font-family: 'Montserrat', Arial, sans-serif;
-            background-color: var(--light-bg);
-            color: var(--text-dark);
-            line-height: 1.5;
-        }
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 10px 20px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .logo {
-            font-size: 20px;
-            font-weight: bold;
-        }
-        .nav-links {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 20px;
-        }
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 15px;
-        }
-        .nav-links a:hover {
-            text-decoration: underline;
-        }
-        .hero {
-            background: url('hero.png') center/cover no-repeat;
-            min-height: 300px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-            position: relative;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to bottom right, rgba(7,29,65,0.7), rgba(0,94,184,0.7));
-        }
-        .hero h1 {
-            font-size: 32px;
-            margin: 0;
-            position: relative;
-        }
-        .hero p {
-            font-size: 18px;
-            max-width: 600px;
-            margin-top: 10px;
-            position: relative;
-        }
-        .content {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        .content h2 {
-            color: var(--secondary-color);
-            margin-top: 40px;
-        }
-        .package {
-            background: var(--card-bg);
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-        .package h3 {
-            margin-top: 0;
-            color: var(--primary-color);
-        }
-        .package ul {
-            padding-left: 20px;
-        }
-        .package li {
-            margin-bottom: 6px;
-        }
-        .package .price-range {
-            font-weight: bold;
-            margin-top: 10px;
-            color: var(--secondary-color);
-        }
-        .cta {
-            text-align: center;
-            margin-top: 30px;
-        }
-        .cta a {
-            background: var(--secondary-color);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-size: 16px;
-        }
-        .cta a:hover {
-            background: #004e90;
-        }
-        footer {
-            background: var(--primary-color);
-            color: white;
-            padding: 30px 20px;
-            margin-top: 60px;
-        }
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .footer-content p {
-            margin: 5px 0;
-        }
-        .footer-content a {
-            color: #90c0e6;
-            text-decoration: none;
-        }
-        .footer-content a:hover {
-            text-decoration: underline;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HR & Platform Integration | RAFA NextGen Business Solutions LTD</title>
+<meta name="description" content="Streamline HR processes with our toolkit, dashboards and custom platforms.">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">RAFA NextGen</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="website-development.html">Website&nbsp;Development</a></li>
-                <li><a href="hr-platform-integration.html">HR&nbsp;&nbsp;Integration</a></li>
-                <li><a href="data-powerbi.html">Data&nbsp;&amp;&nbsp;Analytics</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section class="hero">
-        <h1>HR &amp; Platform Integration</h1>
-        <p>Simplify HR processes and enhance productivity with automated dashboards and workflows.</p>
-    </section>
-    <div class="content">
-        <h2>Our Packages</h2>
-        <div class="package">
-            <h3>Starter Toolkit</h3>
-            <ul>
-                <li>Centralised staff database & simple onboarding forms</li>
-                <li>Leave and absence tracking dashboard</li>
-                <li>Email notifications for approvals</li>
-                <li>1 month support & training</li>
-            </ul>
-            <p class="price-range">£800–£1,200</p>
-        </div>
-        <div class="package">
-            <h3>Business Dashboard</h3>
-            <ul>
-                <li>Automated leave approval & payroll summary</li>
-                <li>Custom reporting & analytics</li>
-                <li>Integration with popular HR platforms</li>
-                <li>2 months support & onboarding assistance</li>
-            </ul>
-            <p class="price-range">£1,500–£2,500</p>
-        </div>
-        <div class="package">
-            <h3>Premium Platform</h3>
-            <ul>
-                <li>Fully tailored HR system with Slack/MS Teams integration</li>
-                <li>Performance reviews & staff development modules</li>
-                <li>Real‑time dashboards & automated reminders</li>
-                <li>3 months support and process documentation</li>
-            </ul>
-            <p class="price-range">£3,000–£6,000+</p>
-        </div>
-        <h2>Why choose us?</h2>
-        <p>Managing people and processes doesn’t have to be complicated. Our HR dashboards and platforms put everything in one place so you can concentrate on your team. We clearly outline what’s included and make it easy for visitors to find the information they need【543644734196531†L99-L113】. Our intuitive interfaces and clear calls‑to‑action mean less time micromanaging and more time focusing on your core business.</p>
-        <div class="cta">
-            <a href="#contact">Get a personalised demo</a>
-        </div>
-    </div>
-    <footer id="contact">
-        <div class="footer-content">
-            <p><strong>Contact Us</strong></p>
-            <p>Email: <a href="mailto:info@rafanextgen.co.uk">info@rafanextgen.co.uk</a></p>
-            <p>Phone: +44 1234 567890</p>
-            <p>© 2025 RAFA NextGen Business Solutions LTD. All rights reserved.</p>
-        </div>
-    </footer>
+<header class="nav">
+  <a class="brand" href="index.html">RAFA NextGen</a>
+  <nav>
+    <a href="website-development.html">Web</a>
+    <a href="hr-platform-integration.html">HR & Integrations</a>
+    <a href="data-powerbi.html">Data & Power BI</a>
+    <a class="btn" href="contact.html">Let’s Talk</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-media">
+    <video autoplay muted playsinline loop preload="metadata" poster="hero.png">
+      <source src="https://download.samplelib.com/mp4/sample-5s.mp4" type="video/mp4"/>
+    </video>
+    <div class="overlay"></div>
+  </div>
+  <div class="hero-content">
+    <h1>HR & Platform Integration</h1>
+    <p>Simplify HR processes and boost productivity with integrated dashboards, automated workflows and custom platforms.</p>
+  </div>
+</section>
+
+<section class="services">
+  <h2>Packages</h2>
+  <div class="svc-list">
+    <article class="card reveal">
+      <h3>Starter Toolkit</h3>
+      <p>Staff database, leave and holiday tracker, digital onboarding forms and simple reporting.</p>
+      <p><strong>Price: £800–£1,200</strong></p>
+    </article>
+    <article class="card reveal">
+      <h3>Business Dashboard</h3>
+      <p>Automated leave approvals, timesheet integration, payroll summary dashboard and custom reports.</p>
+      <p><strong>Price: £1,500–£2,500</strong></p>
+    </article>
+    <article class="card reveal">
+      <h3>Premium Platform</h3>
+      <p>Fully tailored HR system with Slack/Teams notifications, performance tracking and training for your team.</p>
+      <p><strong>Price: £3,000–£6,000+</strong></p>
+    </article>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Ready to streamline your HR?</h2>
+  <p>Let’s automate your HR tasks so you can focus on what matters—your people.</p>
+  <a class="btn solid" href="contact.html">Book a call</a>
+</section>
+
+<footer class="foot">
+  <p>© RAFA NextGen Business Solutions LTD</p>
+</footer>
+
+<script src="assets/script.js" defer></script>
 </body>
 </html>
