@@ -1,219 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data &amp; Power BI Analytics | RAFA NextGen</title>
-    <!-- Modern Google font to match our updated design -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <meta name="description" content="Transform raw data into actionable insights with our Power BI dashboards and analytics packages designed for small and medium businesses.">
-    <style>
-        :root {
-            --primary-color: #071d41;
-            --secondary-color: #005eb8;
-            --light-bg: #f5f7fa;
-            --text-dark: #1f2937;
-            --card-bg: #ffffff;
-        }
-        body {
-            margin: 0;
-            font-family: 'Montserrat', Arial, sans-serif;
-            background-color: var(--light-bg);
-            color: var(--text-dark);
-            line-height: 1.5;
-        }
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 10px 20px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .logo {
-            font-size: 20px;
-            font-weight: bold;
-        }
-        .nav-links {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 20px;
-        }
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 15px;
-        }
-        .nav-links a:hover {
-            text-decoration: underline;
-        }
-        .hero {
-            background: url('hero.png') center/cover no-repeat;
-            min-height: 300px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-            position: relative;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to bottom right, rgba(7,29,65,0.7), rgba(0,94,184,0.7));
-        }
-        .hero h1 {
-            font-size: 32px;
-            margin: 0;
-            position: relative;
-        }
-        .hero p {
-            font-size: 18px;
-            max-width: 600px;
-            margin-top: 10px;
-            position: relative;
-        }
-        .content {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        .content h2 {
-            color: var(--secondary-color);
-            margin-top: 40px;
-        }
-        .package {
-            background: var(--card-bg);
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-        .package h3 {
-            margin-top: 0;
-            color: var(--primary-color);
-        }
-        .package ul {
-            padding-left: 20px;
-        }
-        .package li {
-            margin-bottom: 6px;
-        }
-        .package .price-range {
-            font-weight: bold;
-            margin-top: 10px;
-            color: var(--secondary-color);
-        }
-        .cta {
-            text-align: center;
-            margin-top: 30px;
-        }
-        .cta a {
-            background: var(--secondary-color);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-size: 16px;
-        }
-        .cta a:hover {
-            background: #004e90;
-        }
-        footer {
-            background: var(--primary-color);
-            color: white;
-            padding: 30px 20px;
-            margin-top: 60px;
-        }
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .footer-content p {
-            margin: 5px 0;
-        }
-        .footer-content a {
-            color: #90c0e6;
-            text-decoration: none;
-        }
-        .footer-content a:hover {
-            text-decoration: underline;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data & Power BI Analytics | RAFA NextGen Business Solutions LTD</title>
+<meta name="description" content="Transform raw data into actionable insights with our Power BI dashboards and analytics packages.">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">RAFA NextGen</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="website-development.html">Website&nbsp;Development</a></li>
-                <li><a href="hr-platform-integration.html">HR&nbsp;&nbsp;Integration</a></li>
-                <li><a href="data-powerbi.html">Data&nbsp;&amp;&nbsp;Analytics</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section class="hero">
-        <h1>Data &amp; Power BI Analytics</h1>
-        <p>Turn raw numbers into powerful stories with interactive dashboards and insights.</p>
-    </section>
-    <div class="content">
-        <h2>Our Packages</h2>
-        <div class="package">
-            <h3>Starter Dashboard</h3>
-            <ul>
-                <li>One Power BI dashboard for a key area (sales, finance or HR)</li>
-                <li>Data connection from Excel or Google Sheets</li>
-                <li>Visual KPIs and summary reports</li>
-                <li>1 hour of user training</li>
-            </ul>
-            <p class="price-range">£600–£1,200</p>
-        </div>
-        <div class="package">
-            <h3>Business Intelligence</h3>
-            <ul>
-                <li>Multiple dashboards covering sales, finance and HR</li>
-                <li>Automated data refresh and scheduled reports</li>
-                <li>Exportable PDF reports and email scheduling</li>
-                <li>Training for up to 3 users</li>
-            </ul>
-            <p class="price-range">£2,000–£4,000</p>
-        </div>
-        <div class="package">
-            <h3>Premium Analytics Suite</h3>
-            <ul>
-                <li>Custom analytics environment with CRM/ERP integration</li>
-                <li>Advanced forecasting and drill‑down analysis</li>
-                <li>Real‑time dashboards with mobile access</li>
-                <li>3 months support and data quality monitoring</li>
-            </ul>
-            <p class="price-range">£5,000+</p>
-        </div>
-        <h2>Why choose us?</h2>
-        <p>Data alone doesn’t drive change—it’s the insights behind it. Our analytics packages translate your raw numbers into easy‑to‑understand dashboards so you can make informed decisions. We address common pain points by organising information clearly and focusing on what matters most【543644734196531†L99-L113】【543644734196531†L144-L151】. With support and training included, you’ll be empowered to harness the power of data without needing to become an expert analyst.</p>
-        <div class="cta">
-            <a href="#contact">Arrange a discovery call</a>
-        </div>
-    </div>
-    <footer id="contact">
-        <div class="footer-content">
-            <p><strong>Contact Us</strong></p>
-            <p>Email: <a href="mailto:info@rafanextgen.co.uk">info@rafanextgen.co.uk</a></p>
-            <p>Phone: +44 1234 567890</p>
-            <p>© 2025 RAFA NextGen Business Solutions LTD. All rights reserved.</p>
-        </div>
-    </footer>
+<header class="nav">
+  <a class="brand" href="index.html">RAFA NextGen</a>
+  <nav>
+    <a href="website-development.html">Web</a>
+    <a href="hr-platform-integration.html">HR & Integrations</a>
+    <a href="data-powerbi.html">Data & Power BI</a>
+    <a class="btn" href="contact.html">Let’s Talk</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-media">
+    <video autoplay muted playsinline loop preload="metadata" poster="hero.png">
+      <source src="https://download.samplelib.com/mp4/sample-5s.mp4" type="video/mp4"/>
+    </video>
+    <div class="overlay"></div>
+  </div>
+  <div class="hero-content">
+    <h1>Data & Power BI Analytics</h1>
+    <p>Transform raw data into actionable insights with our interactive dashboards and analytics suites.</p>
+  </div>
+</section>
+
+<section class="services">
+  <h2>Packages</h2>
+  <div class="svc-list">
+    <article class="card reveal">
+      <h3>Starter Dashboard</h3>
+      <p>One Power BI dashboard for sales, finance or HR; connected to your spreadsheets with user training.</p>
+      <p><strong>Price: £600–£1,200</strong></p>
+    </article>
+    <article class="card reveal">
+      <h3>Business Intelligence Package</h3>
+      <p>Three integrated dashboards (e.g., sales, finance, HR) with automated refresh, exportable reports and user training.</p>
+      <p><strong>Price: £2,000–£4,000</strong></p>
+    </article>
+    <article class="card reveal">
+      <h3>Premium Analytics Suite</h3>
+      <p>Custom analytics environment with advanced metrics, multiple data sources, forecasts and ongoing monitoring.</p>
+      <p><strong>Price: £5,000+</strong></p>
+    </article>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Need better data insights?</h2>
+  <p>We build dashboards that help you understand your business and make smarter decisions, faster.</p>
+  <a class="btn solid" href="contact.html">Book a call</a>
+</section>
+
+<footer class="foot">
+  <p>© RAFA NextGen Business Solutions LTD</p>
+</footer>
+
+<script src="assets/script.js" defer></script>
 </body>
 </html>
