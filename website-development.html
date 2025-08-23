@@ -1,219 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Development | RAFA NextGen</title>
-    <!-- Modern Google font to match our updated design -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <meta name="description" content="Professional web solutions for every stage of your business. From brochure sites to e‑commerce, our development packages scale with you.">
-    <style>
-        :root {
-            --primary-color: #071d41;
-            --secondary-color: #005eb8;
-            --light-bg: #f5f7fa;
-            --text-dark: #1f2937;
-            --card-bg: #ffffff;
-        }
-        body {
-            margin: 0;
-            font-family: 'Montserrat', Arial, sans-serif;
-            background-color: var(--light-bg);
-            color: var(--text-dark);
-            line-height: 1.5;
-        }
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 10px 20px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .logo {
-            font-size: 20px;
-            font-weight: bold;
-        }
-        .nav-links {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 20px;
-        }
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 15px;
-        }
-        .nav-links a:hover {
-            text-decoration: underline;
-        }
-        .hero {
-            background: url('hero.png') center/cover no-repeat;
-            min-height: 300px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-            position: relative;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to bottom right, rgba(7,29,65,0.7), rgba(0,94,184,0.7));
-        }
-        .hero h1 {
-            font-size: 32px;
-            margin: 0;
-            position: relative;
-        }
-        .hero p {
-            font-size: 18px;
-            max-width: 600px;
-            margin-top: 10px;
-            position: relative;
-        }
-        .content {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        .content h2 {
-            color: var(--secondary-color);
-            margin-top: 40px;
-        }
-        .package {
-            background: var(--card-bg);
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-        .package h3 {
-            margin-top: 0;
-            color: var(--primary-color);
-        }
-        .package ul {
-            padding-left: 20px;
-        }
-        .package li {
-            margin-bottom: 6px;
-        }
-        .package .price-range {
-            font-weight: bold;
-            margin-top: 10px;
-            color: var(--secondary-color);
-        }
-        .cta {
-            text-align: center;
-            margin-top: 30px;
-        }
-        .cta a {
-            background: var(--secondary-color);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-size: 16px;
-        }
-        .cta a:hover {
-            background: #004e90;
-        }
-        footer {
-            background: var(--primary-color);
-            color: white;
-            padding: 30px 20px;
-            margin-top: 60px;
-        }
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .footer-content p {
-            margin: 5px 0;
-        }
-        .footer-content a {
-            color: #90c0e6;
-            text-decoration: none;
-        }
-        .footer-content a:hover {
-            text-decoration: underline;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Website Development | RAFA NextGen Business Solutions LTD</title>
+<meta name="description" content="Website development packages for SMEs – custom brochure sites, e-commerce stores and more.">
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- Styles -->
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">RAFA NextGen</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="website-development.html">Website&nbsp;Development</a></li>
-                <li><a href="hr-platform-integration.html">HR&nbsp;&nbsp;Integration</a></li>
-                <li><a href="data-powerbi.html">Data&nbsp;&amp;&nbsp;Analytics</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section class="hero">
-        <h1>Website Development</h1>
-        <p>Professional web solutions for every stage of your business.</p>
-    </section>
-    <div class="content">
-        <h2>Our Packages</h2>
-        <div class="package">
-            <h3>Starter Package</h3>
-            <ul>
-                <li>3–5‑page responsive site with modern design</li>
-                <li>Basic SEO setup (titles & meta descriptions)</li>
-                <li>Contact form integration</li>
-                <li>1 month post‑launch support</li>
-            </ul>
-            <p class="price-range">£500–£800</p>
-        </div>
-        <div class="package">
-            <h3>Business Package</h3>
-            <ul>
-                <li>6–10 pages including blog & news section</li>
-                <li>Enhanced SEO and Google Analytics integration</li>
-                <li>Custom contact and booking forms</li>
-                <li>2 months support & training</li>
-            </ul>
-            <p class="price-range">£1,000–£1,800</p>
-        </div>
-        <div class="package">
-            <h3>Premium Package</h3>
-            <ul>
-                <li>Full e‑commerce site or custom web application</li>
-                <li>Payment gateway and product management</li>
-                <li>Advanced performance & security optimisation</li>
-                <li>3 months support and staff training</li>
-            </ul>
-            <p class="price-range">£1,800–£3,500+</p>
-        </div>
-        <h2>Why choose us?</h2>
-        <p>We build websites that not only look beautiful but also perform brilliantly. Our sites are responsive on all devices, optimised for search engines and designed to convert visitors into customers. By showcasing your services clearly and adding strong calls‑to‑action, we help drive engagement【543644734196531†L83-L96】. We also include ongoing support so you can focus on running your business while we handle the technical side.</p>
-        <div class="cta">
-            <a href="#contact">Request a free consultation</a>
-        </div>
-    </div>
-    <footer id="contact">
-        <div class="footer-content">
-            <p><strong>Contact Us</strong></p>
-            <p>Email: <a href="mailto:info@rafanextgen.co.uk">info@rafanextgen.co.uk</a></p>
-            <p>Phone: +44 1234 567890</p>
-            <p>© 2025 RAFA NextGen Business Solutions LTD. All rights reserved.</p>
-        </div>
-    </footer>
+<header class="nav">
+  <a class="brand" href="index.html">RAFA NextGen</a>
+  <nav>
+    <a href="website-development.html">Web</a>
+    <a href="hr-platform-integration.html">HR & Integrations</a>
+    <a href="data-powerbi.html">Data & Power BI</a>
+    <a class="btn" href="contact.html">Let’s Talk</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-media">
+    <video autoplay muted playsinline loop preload="metadata" poster="hero.png">
+      <source src="https://download.samplelib.com/mp4/sample-5s.mp4" type="video/mp4"/>
+    </video>
+    <div class="overlay"></div>
+  </div>
+  <div class="hero-content">
+    <h1>Website Development</h1>
+    <p>Beautiful, responsive websites and e‑commerce stores for businesses of any size.</p>
+  </div>
+</section>
+
+<section class="services">
+  <h2>Packages</h2>
+  <div class="svc-list">
+    <article class="card reveal">
+      <h3>Starter Package</h3>
+      <p>3‑5 page responsive website, basic SEO setup and contact form.</p>
+      <p><strong>Price: £500–£800</strong></p>
+    </article>
+    <article class="card reveal">
+      <h3>Business Package</h3>
+      <p>6–10 pages with blog integration, enhanced SEO, forms and maps, plus hosting setup.</p>
+      <p><strong>Price: £1,000–£1,800</strong></p>
+    </article>
+    <article class="card reveal">
+      <h3>Premium Package</h3>
+      <p>Full e‑commerce or custom web application with payment integration, training and 3 months support.</p>
+      <p><strong>Price: £1,800–£3,500+</strong></p>
+    </article>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Ready to build your website?</h2>
+  <p>Book a consultation and we’ll design a site that fits your brand and converts visitors into customers.</p>
+  <a class="btn solid" href="contact.html">Book a call</a>
+</section>
+
+<footer class="foot">
+  <p>© RAFA NextGen Business Solutions LTD</p>
+</footer>
+
+<script src="assets/script.js" defer></script>
 </body>
 </html>
