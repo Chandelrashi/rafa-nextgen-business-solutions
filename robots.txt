@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://chandelrashi.github.io/rafa-nextgen-business-solutions/sitemap.xml
