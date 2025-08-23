@@ -1,364 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RAFA NextGen Business Solutions LTD</title>
-    <!-- Preload our hero background video for faster playback -->
-    <link rel="preload" as="video" href="https://download.samplelib.com/mp4/sample-5s.mp4" type="video/mp4">
-    <!-- Modern Google font for a more polished look -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <meta name="description" content="Reliable IT solutions, web development, HR integration and data analytics delivered by top talent. We embed with your team to ensure success.">
-    <style>
-        :root {
-            --primary-color: #071d41;
-            --secondary-color: #005eb8;
-            --light-bg: #f5f7fa;
-            --text-dark: #1f2937;
-            --card-bg: #ffffff;
-        }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RAFA NextGen Business Solutions LTD</title>
 
-        body {
-            margin: 0;
-            /* Use Montserrat font for a modern appearance */
-            font-family: 'Montserrat', Arial, sans-serif;
-            background-color: var(--light-bg);
-            color: var(--text-dark);
-            line-height: 1.5;
-        }
+  <!-- Meta / Open Graph -->
+  <meta name="description" content="Reliable web, HR platform integration, and data analytics delivered by top talent. A true partnership—done right, first time." />
+  <meta property="og:title" content="RAFA NextGen Business Solutions LTD" />
+  <meta property="og:description" content="Web, HR integrations, and Power BI dashboards for SMEs." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://chandelrashi.github.io/rafa-nextgen-business-solutions/" />
 
-        /* Navigation */
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 10px 20px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .logo {
-            font-size: 20px;
-            font-weight: bold;
-        }
-        .nav-links {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 20px;
-        }
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 15px;
-        }
-        .nav-links a:hover {
-            text-decoration: underline;
-        }
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
-        /* Hero section with video background */
-        .hero {
-            position: relative;
-            min-height: 450px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            overflow: hidden;
-        }
-        /* Video element fills the hero container */
-        .hero .bg-video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -2;
-        }
-        /* Add a gradient overlay on top of the video for contrast */
-        .hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to bottom right, rgba(7,29,65,0.7), rgba(0,94,184,0.7));
-            z-index: -1;
-        }
-        .hero h1 {
-            font-size: 36px;
-            margin: 0;
-            position: relative;
-        }
-        .hero p {
-            font-size: 18px;
-            margin-top: 10px;
-            max-width: 600px;
-            position: relative;
-        }
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/style.css" />
 
-        /* Services Overview */
-        .services-overview {
-            padding: 60px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .services-overview h2 {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .card-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-        .service-card {
-            background: var(--card-bg);
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .service-card h3 {
-            margin-top: 0;
-            color: var(--secondary-color);
-        }
-        .service-card p {
-            font-size: 14px;
-        }
-        .service-card a {
-            margin-top: 15px;
-            align-self: flex-start;
-            background: var(--secondary-color);
-            color: white;
-            padding: 10px 16px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-size: 14px;
-        }
-        .service-card a:hover {
-            background: #004e90;
-        }
-
-        /* CTA & Highlights */
-        .cta-lead {
-            background: var(--light-bg);
-            padding: 60px 20px;
-            text-align: center;
-        }
-        .cta-lead h2 {
-            font-size: 28px;
-            margin-bottom: 10px;
-            color: var(--primary-color);
-        }
-        .cta-lead h3 {
-            font-size: 22px;
-            margin-top: 0;
-            color: var(--secondary-color);
-        }
-        .highlights {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
-            margin: 40px auto;
-            max-width: 1000px;
-        }
-        .highlight {
-            background: var(--card-bg);
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            text-align: left;
-        }
-        .highlight h4 {
-            margin-top: 0;
-            color: var(--secondary-color);
-        }
-        .highlight p {
-            font-size: 14px;
-        }
-        .cta-button {
-            display: inline-block;
-            margin-top: 20px;
-            background: var(--secondary-color);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-size: 16px;
-        }
-        .cta-button:hover {
-            background: #004e90;
-        }
-
-        /* Difference Section */
-        .difference {
-            background: var(--light-bg);
-            padding: 60px 20px;
-            text-align: center;
-        }
-        .difference h2 {
-            font-size: 28px;
-            margin-bottom: 10px;
-            color: var(--primary-color);
-        }
-        .difference p {
-            max-width: 800px;
-            margin: 0 auto 30px;
-            font-size: 16px;
-        }
-        .difference-features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        .feature {
-            background: var(--card-bg);
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            text-align: left;
-        }
-        .feature h4 {
-            margin-top: 0;
-            color: var(--secondary-color);
-        }
-        .feature p {
-            font-size: 14px;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--primary-color);
-            color: white;
-            padding: 30px 20px;
-            margin-top: 60px;
-        }
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .footer-content p {
-            margin: 5px 0;
-        }
-        .footer-content a {
-            color: #90c0e6;
-            text-decoration: none;
-        }
-        .footer-content a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <!-- JSON-LD Local Business -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"RAFA NextGen Business Solutions LTD",
+    "url":"https://chandelrashi.github.io/rafa-nextgen-business-solutions/",
+    "image":"hero.png",
+    "address":{"@type":"PostalAddress","addressLocality":"Colchester","addressRegion":"Essex","addressCountry":"GB"},
+    "areaServed":"GB",
+    "description":"Web development, HR platform integrations, and data analytics for SMEs."
+  }
+  </script>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">RAFA NextGen</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="website-development.html">Website&nbsp;Development</a></li>
-                <li><a href="hr-platform-integration.html">HR&nbsp;&nbsp;Integration</a></li>
-                <li><a href="data-powerbi.html">Data&nbsp;&amp;&nbsp;Analytics</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Sticky glass navbar -->
+  <header class="nav">
+    <a class="brand" href="index.html">RAFA NextGen</a>
+    <nav>
+      <a href="website-development.html">Web</a>
+      <a href="hr-platform-integration.html">HR & Integrations</a>
+      <a href="data-powerbi.html">Data & Power BI</a>
+      <a class="btn" href="contact.html">Let’s Talk</a>
+    </nav>
+  </header>
 
-    <section class="hero">
-        <!-- Video background for the hero section -->
-        <video class="bg-video" autoplay muted loop playsinline>
-            <source src="https://download.samplelib.com/mp4/sample-5s.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <h1>Empowering Your Business for the Next Generation</h1>
-        <p>Smart websites, powerful dashboards and tailored platforms to drive growth and efficiency for small and medium enterprises.</p>
-    </section>
+  <!-- Hero with video background -->
+  <section class="hero" aria-label="Hero">
+    <div class="hero-media">
+      <!-- replace the src with your hosted mp4 if you prefer -->
+      <video autoplay muted playsinline loop preload="metadata" poster="hero.png">
+        <source src="https://download.samplelib.com/mp4/sample-5s.mp4" type="video/mp4" />
+      </video>
+      <div class="overlay"></div>
+    </div>
+    <div class="hero-content">
+      <h1>Build Faster. Integrate Smarter. See Insights Clearly.</h1>
+      <p>Websites, HR platforms, and Power BI dashboards—delivered by a partner who embeds with your team.</p>
+      <div class="cta-row">
+        <a class="btn solid" href="contact.html">Start a project</a>
+        <a class="btn ghost" href="#why">Why choose us</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- CTA & Highlights Section inspired by Sofomo -->
-    <section class="cta-lead">
-        <h2>A Better Way to Grow</h2>
-        <h3>Reliable Solutions &amp; True Partnership</h3>
-        <div class="highlights">
-            <div class="highlight">
-                <h4>Only top talent</h4>
-                <p>Our team of web developers, HR technologists and data analysts are experts in their craft, delivering quality solutions with a flawless attitude.</p>
-            </div>
-            <div class="highlight">
-                <h4>Properly integrated</h4>
-                <p>We fully embed into your organisation, joining your team, processes and culture to ensure seamless adoption and onboarding.</p>
-            </div>
-            <div class="highlight">
-                <h4>Uniquely personal</h4>
-                <p>We back you with everything we’ve got. Expect responsive support and a partnership built around your success.</p>
-            </div>
-        </div>
-        <a href="#contact" class="cta-button">Let's Talk</a>
-    </section>
+  <!-- Problem → Solution -->
+  <section class="grid features" id="why" aria-label="Why choose us">
+    <article class="card reveal">
+      <h3>Only top talent</h3>
+      <p>Experienced developers & analysts, production standards, no shortcuts.</p>
+    </article>
+    <article class="card reveal">
+      <h3>Properly integrated</h3>
+      <p>We wire up your HR, CRM and data sources the right way—secure and maintainable.</p>
+    </article>
+    <article class="card reveal">
+      <h3>Uniquely personal</h3>
+      <p>One accountable partner. Clear comms. Delivery you can measure.</p>
+    </article>
+  </section>
 
-    <!-- Difference Section -->
-    <section class="difference">
-        <h2>Why Choose RAFA NextGen</h2>
-        <p>We’re relationship‑first, not transactional. Unlike generic vendors, we invest time to understand your goals and provide continuous support every step of the way.</p>
-        <div class="difference-features">
-            <div class="feature">
-                <h4>Relationship‑first</h4>
-                <p>We spend quality time with you to understand your challenges and support you from start to finish.</p>
-            </div>
-            <div class="feature">
-                <h4>Fully committed</h4>
-                <p>Our specialists become devoted members of your team, ensuring seamless integration and lasting results.</p>
-            </div>
-            <div class="feature">
-                <h4>Genuine accountability</h4>
-                <p>We take personal responsibility for your success—no radio silence or empty promises.</p>
-            </div>
-            <div class="feature">
-                <h4>Proven experience</h4>
-                <p>With years of delivering IT solutions, you gain access to expertise honed across projects just like yours.</p>
-            </div>
-        </div>
-    </section>
+  <!-- Services summary (no prices on homepage) -->
+  <section class="services" aria-label="Services">
+    <h2>What we do</h2>
+    <div class="svc-list">
+      <a class="svc reveal" href="website-development.html">
+        <h4>Website Development</h4><p>SME sites & e-commerce that convert.</p>
+      </a>
+      <a class="svc reveal" href="hr-platform-integration.html">
+        <h4>HR & Platform Integrations</h4><p>Onboarding, leave tracking, automations.</p>
+      </a>
+      <a class="svc reveal" href="data-powerbi.html">
+        <h4>Data & Power BI Analytics</h4><p>Dashboards for sales, finance, HR.</p>
+      </a>
+    </div>
+  </section>
 
-    <section class="services-overview">
-        <h2>Our Core Services</h2>
-        <div class="card-container">
-            <div class="service-card">
-                <h3>Website Development</h3>
-                <p>From simple brochure sites to robust e‑commerce platforms, we craft responsive web experiences that look great on every device.</p>
-                <a href="website-development.html">Learn more</a>
-            </div>
-            <div class="service-card">
-                <h3>HR &amp; Platform Integration</h3>
-                <p>Automate onboarding, timesheets and payroll with tailored HR dashboards and integrations into your existing systems.</p>
-                <a href="hr-platform-integration.html">Learn more</a>
-            </div>
-            <div class="service-card">
-                <h3>Data &amp; Power BI Dashboards</h3>
-                <p>Unlock the story behind your numbers with dashboards and analytics that turn raw data into actionable insights.</p>
-                <a href="data-powerbi.html">Learn more</a>
-            </div>
-        </div>
-    </section>
+  <!-- Logos / social proof (replace with real logos) -->
+  <section class="logos" aria-label="Trusted by">
+    <img loading="lazy" src="assets/logo1.svg" alt="Client logo 1">
+    <img loading="lazy" src="assets/logo2.svg" alt="Client logo 2">
+    <img loading="lazy" src="assets/logo3.svg" alt="Client logo 3">
+  </section>
 
-    <footer id="contact">
-        <div class="footer-content">
-            <p><strong>Contact Us</strong></p>
-            <p>Email: <a href="mailto:info@rafanextgen.co.uk">info@rafanextgen.co.uk</a></p>
-            <p>Phone: +44 1234 567890</p>
-            <p>© 2025 RAFA NextGen Business Solutions LTD. All rights reserved.</p>
-        </div>
-    </footer>
+  <!-- Testimonials -->
+  <section class="testimonials" aria-label="Testimonials">
+    <figure class="reveal">
+      <blockquote>“Flawless delivery. Clear timelines and real results.”</blockquote>
+      <figcaption>— Owner, Local Retail</figcaption>
+    </figure>
+    <figure class="reveal">
+      <blockquote>“They automated our HR flows—saved hours every week.”</blockquote>
+      <figcaption>— HR Lead, Clinic</figcaption>
+    </figure>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" aria-label="Call to action">
+    <h2>Ready when you are.</h2>
+    <p>Tell us your goals—web, HR, or analytics—and we’ll map a plan you can execute next week.</p>
+    <a class="btn solid" href="contact.html">Book a call</a>
+  </section>
+
+  <footer class="foot">
+    <p>© RAFA NextGen Business Solutions LTD</p>
+  </footer>
+
+  <script src="assets/script.js" defer></script>
 </body>
 </html>
