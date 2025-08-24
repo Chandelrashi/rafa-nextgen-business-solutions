@@ -63,16 +63,36 @@ a.btn:hover {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Improve spacing between navigation links */
+
+/* Navigation spacing
+ * Increase the gap between links and remove individual margins for cleaner spacing. */
+.nav nav {
+  display: flex;
+  /* Adjust spacing between navigation links for balanced layout */
+  /* Increase the gap between navigation links for better readability */
+  gap: 2.2rem;
+  align-items: center;
+}
+
+.nav nav a {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* About section */
+.about p {
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--muted);
+}
+
 .nav .brand {
   font-size: 1.3rem;
   font-weight: 700;
 }
 
-.nav nav a {
-  margin-left: 1.2rem;
-  font-weight: 600;
-}
-
+/* Remove redundant margin declarations that previously caused inconsistent spacing. */
 .nav nav a.btn {
   margin-left: 2rem;
 }
@@ -172,6 +192,26 @@ a.btn:hover {
   transform: translateY(-5px);
 }
 
+/* Service images */
+.svc-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+}
+
+/* Values list within About section */
+.values-list {
+  max-width: 800px;
+  margin: 1rem auto 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+.values-list li {
+  margin-bottom: 0.4rem;
+}
+
 .services-grid h4 {
   margin: 0 0 0.5rem;
 }
@@ -213,6 +253,15 @@ a.btn:hover {
   font-weight: 600;
   color: var(--accent);
   margin-top: 0.5rem;
+}
+
+/* Illustrative image within the About section */
+.about-img {
+  display: block;
+  max-width: 100%;
+  border-radius: 12px;
+  margin: 2rem auto 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 /* Additional information paragraphs */
@@ -283,4 +332,12 @@ a.btn:hover {
 .reveal.show {
   opacity: 1;
   transform: none;
+}
+
+/* Motto style for hero tagline */
+.motto {
+  font-size: 1.2rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 0.8rem;
 }
