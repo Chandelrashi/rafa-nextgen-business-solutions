@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://chandelrashi.github.io/rafa-nextgen-business-solutions/</loc></url>
-  <url><loc>https://chandelrashi.github.io/rafa-nextgen-business-solutions/website-development.html</loc></url>
-  <url><loc>https://chandelrashi.github.io/rafa-nextgen-business-solutions/hr-platform-integration.html</loc></url>
-  <url><loc>https://chandelrashi.github.io/rafa-nextgen-business-solutions/data-powerbi.html</loc></url>
-  <url><loc>https://chandelrashi.github.io/rafa-nextgen-business-solutions/contact.html</loc></url>
+  <url>
+    <loc>https://chandelrashi.github.io/rafa-nextgen-business-solutions/</loc>
+  </url>
+  <url>
+    <loc>https://chandelrashi.github.io/rafa-nextgen-business-solutions/development.html</loc>
+  </url>
+  <url>
+    <loc>https://chandelrashi.github.io/rafa-nextgen-business-solutions/consulting.html</loc>
+  </url>
+  <url>
+    <loc>https://chandelrashi.github.io/rafa-nextgen-business-solutions/ai.html</loc>
+  </url>
+  <url>
+    <loc>https://chandelrashi.github.io/rafa-nextgen-business-solutions/digital.html</loc>
+  </url>
+  <url>
+    <loc>https://chandelrashi.github.io/rafa-nextgen-business-solutions/industry.html</loc>
+  </url>
+  <url>
+    <loc>https://chandelrashi.github.io/rafa-nextgen-business-solutions/contact.html</loc>
+  </url>
 </urlset>
